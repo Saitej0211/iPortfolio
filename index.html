@@ -493,7 +493,8 @@ footer a{color:var(--teal);text-decoration:none;}
         </div>
         <div class="form-group"><label>Subject</label><input type="text" placeholder="What's this about?"/></div>
         <div class="form-group"><label>Message</label><textarea rows="5" placeholder="Your message..."></textarea></div>
-        <button class="btn btn-primary" onclick="alert('Thanks for reaching out! Wire this up to Formspree or EmailJS for live email delivery.')">Send Message →</button>
+        <button class="btn btn-primary" id="send-btn" onclick="sendMessage()">Send Message →</button>
+        <div id="form-status" style="font-size:.85rem;margin-top:.5rem;display:none;"></div>
       </div>
     </div>
   </div>
@@ -543,7 +544,43 @@ function drawLines(){
 function animate(){ ctx.clearRect(0,0,W,H); particles.forEach(p=>{p.update();p.draw();}); drawLines(); requestAnimationFrame(animate); }
 animate();
 
-// TYPEWRITER
+// CONTACT FORM - Formspree
+async function sendMessage(){
+  const FORMSPREE_ID = 'mqedvldz';
+  const btn = document.getElementById('send-btn');
+  const status = document.getElementById('form-status');
+  const name = document.querySelector('input[placeholder="Your name"]').value.trim();
+  const email = document.querySelector('input[placeholder="your@email.com"]').value.trim();
+  const subject = document.querySelector('input[placeholder="What\'s this about?"]').value.trim();
+  const message = document.querySelector('textarea').value.trim();
+
+  if(!name || !email || !message){
+    status.style.display='block'; status.style.color='#f87171';
+    status.textContent='⚠️ Please fill in your name, email, and message.'; return;
+  }
+
+  btn.textContent='Sending...'; btn.disabled=true; btn.style.opacity='.7';
+
+  try {
+    const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify({name, email, subject, message})
+    });
+    const data = await res.json();
+    if(res.ok){
+      status.style.display='block'; status.style.color='var(--teal)';
+      status.textContent='✅ Message sent! I\'ll get back to you soon.';
+      document.querySelectorAll('.contact-form input, .contact-form textarea').forEach(el=>el.value='');
+    } else {
+      throw new Error(data?.errors?.[0]?.message || 'Something went wrong.');
+    }
+  } catch(err){
+    status.style.display='block'; status.style.color='#f87171';
+    status.textContent='❌ Failed to send: ' + err.message;
+  }
+  btn.textContent='Send Message →'; btn.disabled=false; btn.style.opacity='1';
+}
 const roles=["Data Engineer","Data Scientist","ML Engineer","Data Analyst","Business Analyst"];
 let ri=0,ci=0,del=false;
 const el=document.getElementById('typed-role');
