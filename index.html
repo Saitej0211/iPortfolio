@@ -9,16 +9,10 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--light);line-height:1.6;overflow-x:hidden;}
-
-/* SCROLLBAR */
 ::-webkit-scrollbar{width:6px;}
 ::-webkit-scrollbar-track{background:var(--bg);}
 ::-webkit-scrollbar-thumb{background:var(--teal);border-radius:3px;}
-
-/* CANVAS BG */
 #bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.5;}
-
-/* NAV */
 nav{position:fixed;top:0;width:100%;background:rgba(6,13,26,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);z-index:1000;padding:0 2rem;}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;}
 .nav-logo{font-weight:800;font-size:1.2rem;color:var(--white);letter-spacing:.02em;}
@@ -30,8 +24,6 @@ nav{position:fixed;top:0;width:100%;background:rgba(6,13,26,.85);backdrop-filter
 .nav-links a:hover::after{width:100%;}
 .nav-cta{background:linear-gradient(135deg,var(--teal),var(--cyan));color:var(--bg)!important;padding:.4rem 1rem;border-radius:6px;font-weight:700!important;}
 .nav-cta::after{display:none!important;}
-
-/* HERO */
 #hero{min-height:100vh;display:flex;align-items:center;padding:80px 2rem 2rem;position:relative;z-index:1;}
 .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;width:100%;}
 .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,212,180,.1);border:1px solid rgba(0,212,180,.3);color:var(--teal);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.35rem 1rem;border-radius:999px;margin-bottom:1.5rem;}
@@ -64,15 +56,11 @@ nav{position:fixed;top:0;width:100%;background:rgba(6,13,26,.85);backdrop-filter
 .stat-card:hover{border-color:var(--teal);}
 .stat-card .num{font-size:1.6rem;font-weight:900;background:linear-gradient(135deg,var(--teal),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .stat-card .lbl{font-size:.7rem;color:var(--gray);margin-top:.2rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;}
-
-/* SECTION BASE */
 section{padding:6rem 2rem;position:relative;z-index:1;}
 .section-inner{max-width:1200px;margin:0 auto;}
 .section-label{font-size:.72rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:.4rem;}
 .section-title{font-size:2.2rem;font-weight:900;color:var(--white);margin-bottom:.5rem;letter-spacing:-.01em;}
 .section-line{width:50px;height:3px;background:linear-gradient(90deg,var(--teal),var(--cyan));border-radius:2px;margin-bottom:2.8rem;}
-
-/* ABOUT */
 #about{background:var(--bg2);}
 .about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:4rem;align-items:start;}
 .about-text p{color:var(--gray);margin-bottom:1rem;font-size:.96rem;line-height:1.85;}
@@ -85,8 +73,6 @@ section{padding:6rem 2rem;position:relative;z-index:1;}
 .info-val{font-size:.88rem;color:var(--white);font-weight:500;}
 .info-val a{color:var(--teal);text-decoration:none;}
 .info-val a:hover{text-decoration:underline;}
-
-/* SKILLS */
 #skills{background:var(--bg);}
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;}
 .skill-cat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;transition:transform .3s,border-color .3s,box-shadow .3s;}
@@ -97,8 +83,6 @@ section{padding:6rem 2rem;position:relative;z-index:1;}
 .tags{display:flex;flex-wrap:wrap;gap:.4rem;}
 .tag{background:rgba(0,212,180,.07);color:var(--teal);font-size:.73rem;font-weight:600;padding:.25rem .65rem;border-radius:6px;border:1px solid rgba(0,212,180,.2);transition:background .2s;}
 .tag:hover{background:rgba(0,212,180,.15);}
-
-/* EXPERIENCE */
 #experience{background:var(--bg2);}
 .timeline{position:relative;padding-left:2.5rem;}
 .timeline::before{content:'';position:absolute;left:.6rem;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--teal),transparent);}
@@ -106,17 +90,17 @@ section{padding:6rem 2rem;position:relative;z-index:1;}
 .tl-dot{position:absolute;left:-2.5rem;top:.4rem;width:16px;height:16px;background:linear-gradient(135deg,var(--teal),var(--cyan));border:3px solid var(--bg2);border-radius:50%;box-shadow:0 0 12px rgba(0,212,180,.5);}
 .tl-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;transition:border-color .3s,box-shadow .3s;}
 .tl-card:hover{border-color:rgba(0,212,180,.3);box-shadow:0 8px 30px rgba(0,212,180,.06);}
+.tl-card.current{border-color:rgba(0,212,180,.3);}
 .tl-header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.4rem;}
 .tl-role{font-size:1rem;font-weight:800;color:var(--white);}
 .tl-badge{background:linear-gradient(135deg,rgba(0,212,180,.15),rgba(0,229,255,.1));border:1px solid rgba(0,212,180,.3);color:var(--teal);font-size:.72rem;font-weight:700;padding:.2rem .7rem;border-radius:999px;text-transform:uppercase;letter-spacing:.06em;}
+.tl-badge.volunteer{background:linear-gradient(135deg,rgba(139,92,246,.15),rgba(167,139,250,.1));border-color:rgba(139,92,246,.3);color:#a78bfa;}
 .tl-company{font-size:.92rem;font-weight:700;color:var(--teal);margin-bottom:.2rem;}
 .tl-meta{font-size:.8rem;color:var(--gray);margin-bottom:.9rem;}
 .tl-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:.4rem;}
 .tl-list li{font-size:.87rem;color:var(--gray);padding:.2rem 0 .2rem 1.2rem;position:relative;line-height:1.7;}
 .tl-list li::before{content:'▸';position:absolute;left:0;color:var(--teal);}
 .tl-list li strong{color:var(--teal);}
-
-/* PROJECTS */
 #projects{background:var(--bg);}
 .proj-filters{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2rem;}
 .filter-btn{background:rgba(13,31,53,.8);border:1px solid var(--border);color:var(--gray);font-size:.78rem;font-weight:700;padding:.35rem .9rem;border-radius:999px;cursor:pointer;transition:all .2s;text-transform:uppercase;letter-spacing:.05em;}
@@ -143,8 +127,6 @@ section{padding:6rem 2rem;position:relative;z-index:1;}
 .proj-link{display:inline-flex;align-items:center;gap:.35rem;font-size:.79rem;font-weight:700;color:var(--teal);text-decoration:none;border:1px solid rgba(0,212,180,.3);padding:.3rem .8rem;border-radius:7px;transition:all .2s;letter-spacing:.02em;}
 .proj-link:hover{background:rgba(0,212,180,.1);border-color:var(--teal);}
 .proj-link svg{width:13px;height:13px;fill:currentColor;}
-
-/* EDUCATION */
 #education{background:var(--bg2);}
 .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
 .edu-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.8rem;transition:border-color .3s,box-shadow .3s;position:relative;overflow:hidden;}
@@ -157,8 +139,6 @@ section{padding:6rem 2rem;position:relative;z-index:1;}
 .edu-gpa{display:inline-block;background:linear-gradient(135deg,rgba(0,212,180,.15),rgba(0,229,255,.1));border:1px solid rgba(0,212,180,.3);color:var(--teal);font-size:.8rem;font-weight:800;padding:.3rem .8rem;border-radius:8px;margin-bottom:.8rem;}
 .edu-courses{font-size:.82rem;color:var(--gray);line-height:1.7;}
 .edu-courses strong{color:var(--light);}
-
-/* CONTACT */
 #contact{background:var(--bg);}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
 .contact-desc{font-size:.97rem;color:var(--gray);margin-bottom:2rem;line-height:1.85;}
@@ -175,35 +155,24 @@ section{padding:6rem 2rem;position:relative;z-index:1;}
 .form-group input:focus,.form-group textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,212,180,.1);}
 .form-group input::placeholder,.form-group textarea::placeholder{color:var(--gray);}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-
-/* FOOTER */
 footer{background:var(--bg2);border-top:1px solid var(--border);color:var(--gray);text-align:center;padding:2.5rem;font-size:.85rem;position:relative;z-index:1;}
 footer .footer-logo{font-size:1.4rem;font-weight:900;color:var(--white);margin-bottom:.5rem;}
 footer .footer-logo span{color:var(--teal);}
 footer a{color:var(--teal);text-decoration:none;}
-
-/* SCROLL REVEAL */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.visible{opacity:1;transform:none;}
-
-/* RESPONSIVE */
 @media(max-width:900px){
   .hero-inner,.about-grid,.edu-grid,.contact-grid{grid-template-columns:1fr;}
   .hero h1{font-size:2.5rem;}
   .hero-right{align-items:flex-start;flex-direction:row;flex-wrap:wrap;gap:1.5rem;}
   .form-row{grid-template-columns:1fr;}
 }
-@media(max-width:600px){
-  .nav-links{display:none;}
-  .hero h1{font-size:2rem;}
-}
+@media(max-width:600px){.nav-links{display:none;}.hero h1{font-size:2rem;}}
 </style>
 </head>
 <body>
-
 <canvas id="bg-canvas"></canvas>
 
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <div class="nav-logo">SRG<span>.</span></div>
@@ -218,7 +187,6 @@ footer a{color:var(--teal);text-decoration:none;}
   </div>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-inner">
     <div>
@@ -241,11 +209,11 @@ footer a{color:var(--teal);text-decoration:none;}
         </div>
       </div>
       <div class="tech-chips">
-        <span class="tech-chip">Python</span><span class="tech-chip">SQL</span><span class="tech-chip">AWS</span><span class="tech-chip">Spark</span><span class="tech-chip">ML</span><span class="tech-chip">Power BI</span>
+        <span class="tech-chip">Python</span><span class="tech-chip">SQL</span><span class="tech-chip">AWS</span><span class="tech-chip">Azure</span><span class="tech-chip">Spark</span><span class="tech-chip">Power BI</span>
       </div>
       <div class="hero-stats">
         <div class="stat-card"><div class="num">3.78</div><div class="lbl">GPA / 4.0</div></div>
-        <div class="stat-card"><div class="num">35%</div><div class="lbl">Faster Reporting</div></div>
+        <div class="stat-card"><div class="num">40%</div><div class="lbl">Faster Insights</div></div>
         <div class="stat-card"><div class="num">10+</div><div class="lbl">Projects</div></div>
         <div class="stat-card"><div class="num">3+</div><div class="lbl">Yrs Experience</div></div>
       </div>
@@ -253,7 +221,6 @@ footer a{color:var(--teal);text-decoration:none;}
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="section-inner">
     <div class="section-label">Who I Am</div>
@@ -262,10 +229,10 @@ footer a{color:var(--teal);text-decoration:none;}
     <div class="about-grid reveal">
       <div class="about-text">
         <p>I'm a full-stack data professional with a Master's in Data Analytics Engineering from Northeastern University (GPA 3.78), uniquely blending expertise across <strong style="color:var(--teal)">Data Engineering, Data Science, Machine Learning,</strong> and <strong style="color:var(--teal)">Business Analytics</strong> into one cohesive skill set.</p>
-        <p>My career spans building real-time cloud-native data pipelines at Helix Tech, risk analytics for financial services at Summit Global Consulting, and procurement SaaS solutions at ProQsmart. I operate across the full data stack — from Kafka streaming pipelines to Tableau dashboards to GCP-deployed ML models.</p>
-        <p>I thrive where engineering meets insight: designing Medallion Architecture warehouses on AWS, building end-to-end MLOps pipelines, crafting DAX-driven Power BI dashboards, and applying inferential statistics for A/B testing and decision support.</p>
+        <p>Currently building production-grade Azure data pipelines at Community Dreams Foundation while having previously delivered cloud-native analytics at Helix Tech, risk analytics for financial services at Summit Global, and procurement SaaS solutions at ProQsmart. I operate across the full data stack — from Kafka streaming pipelines to Tableau dashboards to GCP-deployed ML models.</p>
+        <p>I thrive where engineering meets insight: designing Medallion Architecture warehouses, building end-to-end MLOps pipelines, crafting DAX-driven Power BI dashboards, and applying inferential statistics for A/B testing and decision support.</p>
         <div class="highlight-box">
-          ⚡ Reduced risk reporting by <strong>35%</strong> · Cut manual reconciliation by <strong>40%</strong> · Achieved <strong>88% AUC</strong> in ML classification · Improved query performance by <strong>65%</strong> with optimized data warehouse architecture
+          ⚡ 99% pipeline uptime at Community Dreams · Cut insight delivery by <strong>40%</strong> at Helix Tech · Reduced risk reporting by <strong>35%</strong> at Summit Global · Achieved <strong>88% AUC</strong> in ML classification · Improved query performance by <strong>65%</strong>
         </div>
       </div>
       <div class="info-cards">
@@ -280,7 +247,6 @@ footer a{color:var(--teal);text-decoration:none;}
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="section-inner">
     <div class="section-label">What I Know</div>
@@ -288,16 +254,15 @@ footer a{color:var(--teal);text-decoration:none;}
     <div class="section-line"></div>
     <div class="skills-grid reveal">
       <div class="skill-cat"><div class="skill-cat-header"><div class="skill-icon">🐍</div><h4>Programming & Databases</h4></div><div class="tags"><span class="tag">Python</span><span class="tag">SQL (Advanced)</span><span class="tag">R</span><span class="tag">UNIX</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">MongoDB</span><span class="tag">BigQuery</span></div></div>
-      <div class="skill-cat"><div class="skill-cat-header"><div class="skill-icon">☁️</div><h4>Cloud & Data Engineering</h4></div><div class="tags"><span class="tag">AWS (S3, Glue, Lambda, EC2)</span><span class="tag">GCP / Azure</span><span class="tag">Apache Spark</span><span class="tag">Airflow</span><span class="tag">Kafka</span><span class="tag">Docker</span><span class="tag">ETL / ELT</span><span class="tag">Medallion Architecture</span><span class="tag">Dimensional Modeling</span></div></div>
+      <div class="skill-cat"><div class="skill-cat-header"><div class="skill-icon">☁️</div><h4>Cloud & Data Engineering</h4></div><div class="tags"><span class="tag">AWS (S3, Glue, Lambda, EC2)</span><span class="tag">Azure</span><span class="tag">GCP</span><span class="tag">Apache Spark</span><span class="tag">Airflow</span><span class="tag">Kafka</span><span class="tag">Docker</span><span class="tag">ETL / ELT</span><span class="tag">Medallion Architecture</span><span class="tag">Dimensional Modeling</span></div></div>
       <div class="skill-cat"><div class="skill-cat-header"><div class="skill-icon">🤖</div><h4>Machine Learning & MLOps</h4></div><div class="tags"><span class="tag">Scikit-learn</span><span class="tag">TensorFlow</span><span class="tag">XGBoost</span><span class="tag">Random Forest</span><span class="tag">NLP / LLMs</span><span class="tag">MLflow</span><span class="tag">DVC</span><span class="tag">Vertex AI</span><span class="tag">LangChain</span><span class="tag">SMOTE</span></div></div>
       <div class="skill-cat"><div class="skill-cat-header"><div class="skill-icon">📊</div><h4>BI & Visualization</h4></div><div class="tags"><span class="tag">Power BI (DAX, M)</span><span class="tag">Tableau (LOD)</span><span class="tag">Looker Studio</span><span class="tag">Excel VBA</span><span class="tag">Power Query</span><span class="tag">Matplotlib</span></div></div>
-      <div class="skill-cat"><div class="skill-cat-header"><div class="skill-icon">📈</div><h4>Analytics & Statistics</h4></div><div class="tags"><span class="tag">A/B Testing</span><span class="tag">Hypothesis Testing</span><span class="tag">ANOVA</span><span class="tag">Regression</span><span class="tag">Forecasting</span><span class="tag">RFM Analysis</span><span class="tag">Time Series</span><span class="tag">Diagnostic Analytics</span></div></div>
+      <div class="skill-cat"><div class="skill-cat-header"><div class="skill-icon">📈</div><h4>Analytics & Statistics</h4></div><div class="tags"><span class="tag">A/B Testing</span><span class="tag">Hypothesis Testing</span><span class="tag">ANOVA</span><span class="tag">Regression</span><span class="tag">Forecasting</span><span class="tag">RFM Analysis</span><span class="tag">Time Series</span></div></div>
       <div class="skill-cat"><div class="skill-cat-header"><div class="skill-icon">🗂️</div><h4>Business Analysis & Agile</h4></div><div class="tags"><span class="tag">Requirements Elicitation</span><span class="tag">BRD / FSD</span><span class="tag">AS-IS/TO-BE</span><span class="tag">Gap Analysis</span><span class="tag">UAT</span><span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">Scrum / BPMN</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-inner">
     <div class="section-label">My Journey</div>
@@ -305,47 +270,68 @@ footer a{color:var(--teal);text-decoration:none;}
     <div class="section-line"></div>
     <div class="timeline reveal">
 
+      <!-- COMMUNITY DREAMS FOUNDATION -->
       <div class="tl-item">
         <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-header"><span class="tl-role">Data Engineer & Analyst</span><span class="tl-badge">Current</span></div>
-          <div class="tl-company">Helix Tech</div>
-          <div class="tl-meta">📅 Sep 2025 – Present &nbsp;·&nbsp; 📍 Remote, USA</div>
+        <div class="tl-card current">
+          <div class="tl-header">
+            <span class="tl-role">Data Engineer</span>
+            <span class="tl-badge">Current</span>
+          </div>
+          <div class="tl-company">Community Dreams Foundation</div>
+          <div class="tl-meta">📅 Feb 2026 – Present &nbsp;·&nbsp; 📍 Remote, USA</div>
           <ul class="tl-list">
-            <li>Developed cloud-native data pipelines on <strong>AWS (Glue, Lambda, S3)</strong>, reducing insight delivery latency by <strong>40%</strong>.</li>
-            <li>Built analytics-ready data marts using <strong>star-schema & dimensional modeling</strong> (FactUsage, DimCustomer, DimProduct).</li>
-            <li>Performed large-scale data exploration with <strong>Python & Spark</strong> to uncover trends, behaviors, and performance metrics.</li>
-            <li>Automated orchestration and monitoring in <strong>Airflow</strong> with SLA checks, improving pipeline reliability significantly.</li>
+            <li>Architected and deployed scalable <strong>Azure data pipelines</strong> integrating <strong>5+ cross-functional data sources</strong>, delivering clean, validated datasets and reducing pipeline build time by <strong>30%</strong>.</li>
+            <li>Designed ETL solutions and data models using <strong>Python and SQL</strong> with reusable pipeline templates, cutting reporting framework development time by <strong>25%</strong>.</li>
+            <li>Implemented automated testing and <strong>KPI monitoring frameworks</strong> achieving <strong>99% pipeline uptime</strong> and reducing data quality incidents by <strong>35%</strong>.</li>
+            <li>Collaborated across <strong>3+ departments</strong> to define data strategy, resolve complex issues, and deliver technical documentation, reducing turnaround by <strong>20%</strong>.</li>
           </ul>
         </div>
       </div>
 
+      <!-- HELIX TECH -->
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-card">
-          <div class="tl-header"><span class="tl-role">Data Analyst / Business Analyst Co-op</span></div>
+          <div class="tl-header"><span class="tl-role">Data Analyst</span></div>
+          <div class="tl-company">Helix Tech</div>
+          <div class="tl-meta">📅 Sep 2025 – Jan 2026 &nbsp;·&nbsp; 📍 Remote, USA</div>
+          <ul class="tl-list">
+            <li>Designed and automated product analytics dashboards integrating <strong>AWS (Glue, Lambda, S3)</strong>, reducing insight delivery time by <strong>40%</strong>.</li>
+            <li>Performed large-scale data exploration with <strong>Python & Spark</strong>, uncovering customer behavior trends that improved decision-making speed by <strong>30%</strong>.</li>
+            <li>Developed <strong>SQL-based reporting frameworks</strong>, reducing manual analysis by <strong>45%</strong> and improving efficiency for business stakeholders.</li>
+            <li>Automated orchestration and monitoring in <strong>Airflow</strong> with SLA checks, improving pipeline reliability by <strong>35%</strong>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SUMMIT GLOBAL -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header"><span class="tl-role">Business Analyst Co-op</span></div>
           <div class="tl-company">Summit Global Consulting</div>
-          <div class="tl-meta">📅 Jan 2025 – May 2025 &nbsp;·&nbsp; 📍 Boston, USA</div>
+          <div class="tl-meta">📅 Jan 2025 – May 2025 &nbsp;·&nbsp; 📍 Boston, MA</div>
           <ul class="tl-list">
             <li>Automated KPI pipelines & ETL workflows (Python, SQL, AWS), reducing risk reporting cycle time by <strong>35%</strong>.</li>
             <li>Implemented <strong>Medallion Architecture</strong> and dimensional models, accelerating portfolio analytics by <strong>4x</strong>.</li>
-            <li>Developed <strong>Power BI & Tableau</strong> dashboards for VaR, sensitivity, and exposure analysis across 10+ asset classes.</li>
+            <li>Developed <strong>Power BI & Tableau</strong> dashboards for VaR, sensitivity, and exposure analysis across <strong>10+ asset classes</strong>.</li>
             <li>Translated regulatory compliance requirements into system features, ensuring <strong>100% audit readiness</strong>.</li>
-            <li>Facilitated UAT sessions & cross-functional workshops, reducing post-production defects by <strong>30%</strong>.</li>
           </ul>
         </div>
       </div>
 
+      <!-- PROQSMART -->
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-card">
-          <div class="tl-header"><span class="tl-role">Data Engineer / Analyst Intern</span></div>
+          <div class="tl-header"><span class="tl-role">Software Engineer Intern</span></div>
           <div class="tl-company">ProQsmart Inc.</div>
           <div class="tl-meta">📅 Feb 2023 – May 2023 &nbsp;·&nbsp; 📍 Bengaluru, India</div>
           <ul class="tl-list">
-            <li>Built <strong>ETL processes</strong> in SQL and Python integrating procurement and ticketing data, increasing business visibility.</li>
-            <li>Conducted AS-IS/TO-BE process mapping and gap analysis, improving operational efficiency by <strong>25%</strong>.</li>
+            <li>Built <strong>ETL processes</strong> in SQL and Python integrating procurement and ticketing data, improving operational efficiency by <strong>25%</strong>.</li>
             <li>Designed supplier analytics dashboards in <strong>Tableau & Power BI</strong>, reducing support escalations by <strong>30%</strong>.</li>
+            <li>Conducted AS-IS/TO-BE process mapping and gap analysis, reducing supplier onboarding time by <strong>20%</strong>.</li>
             <li>Coordinated UAT and defect tracking, reducing post-deployment issues by <strong>35%</strong>.</li>
           </ul>
         </div>
@@ -355,7 +341,6 @@ footer a{color:var(--teal);text-decoration:none;}
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="section-inner">
     <div class="section-label">What I've Built</div>
@@ -368,7 +353,6 @@ footer a{color:var(--teal);text-decoration:none;}
       <button class="filter-btn" onclick="filterProj('da',this)">Analytics</button>
     </div>
     <div class="proj-grid reveal">
-
       <div class="proj-card featured" data-cat="ml">
         <div class="proj-header"><span class="proj-type-badge badge-llm">LLM · RAG · NEW</span><span class="featured-tag">⭐ Featured</span></div>
         <h3>LLM-Powered SQL Data Assistant (Text-to-SQL RAG)</h3>
@@ -376,31 +360,20 @@ footer a{color:var(--teal);text-decoration:none;}
         <div class="proj-tech"><span class="proj-tag">LangChain</span><span class="proj-tag">GPT-4</span><span class="proj-tag">FAISS</span><span class="proj-tag">FastAPI</span><span class="proj-tag">Streamlit</span><span class="proj-tag">AWS EC2</span><span class="proj-tag">PostgreSQL</span></div>
         <div class="proj-links"><a href="https://github.com/Saitej0211" target="_blank" class="proj-link"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>GitHub</a></div>
       </div>
-
       <div class="proj-card featured" data-cat="de">
         <div class="proj-header"><span class="proj-type-badge badge-de">Data Engineering · NEW</span><span class="featured-tag">⭐ Featured</span></div>
         <h3>Real-Time Financial Fraud Detection Pipeline</h3>
-        <p>Architected an end-to-end streaming fraud detection system ingesting 100K+ transactions/sec via Kafka. Built Spark Structured Streaming for real-time feature computation (velocity, geo-distance, time-delta). Deployed an XGBoost model via MLflow serving with sub-100ms P99 latency. Alerts via AWS SNS with a live Grafana monitoring dashboard.</p>
+        <p>Architected an end-to-end streaming fraud detection system ingesting 100K+ transactions/sec via Kafka. Built Spark Structured Streaming for real-time feature computation. Deployed an XGBoost model via MLflow serving with sub-100ms P99 latency. Alerts via AWS SNS with a live Grafana monitoring dashboard.</p>
         <div class="proj-tech"><span class="proj-tag">Kafka</span><span class="proj-tag">Spark Streaming</span><span class="proj-tag">XGBoost</span><span class="proj-tag">MLflow</span><span class="proj-tag">AWS SNS</span><span class="proj-tag">PostgreSQL</span><span class="proj-tag">Grafana</span><span class="proj-tag">Docker</span></div>
         <div class="proj-links"><a href="https://github.com/Saitej0211" target="_blank" class="proj-link"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>GitHub</a></div>
       </div>
-
       <div class="proj-card featured" data-cat="ml">
-        <div class="proj-header"><span class="proj-type-badge badge-ml">MLOps · GCP · NEW</span><span class="featured-tag">⭐ Featured</span></div>
-        <h3>Churn Prediction Platform with Automated Retraining</h3>
-        <p>Production-grade churn prediction system on GCP with automated feature pipelines (Vertex AI Feature Store), model training (XGBoost + AutoML), drift detection, and weekly retraining triggers via Cloud Scheduler. Exposed as a REST API with A/B testing framework to compare model versions in production. Full CI/CD via GitHub Actions.</p>
-        <div class="proj-tech"><span class="proj-tag">GCP Vertex AI</span><span class="proj-tag">Feature Store</span><span class="proj-tag">XGBoost</span><span class="proj-tag">BigQuery ML</span><span class="proj-tag">Cloud Scheduler</span><span class="proj-tag">GitHub Actions</span><span class="proj-tag">A/B Testing</span></div>
-        <div class="proj-links"><a href="https://github.com/Saitej0211" target="_blank" class="proj-link"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>GitHub</a></div>
-      </div>
-
-      <div class="proj-card" data-cat="ml">
-        <div class="proj-header"><span class="proj-type-badge badge-ml">MLOps · Machine Learning</span></div>
+        <div class="proj-header"><span class="proj-type-badge badge-ml">MLOps · GCP</span><span class="featured-tag">⭐ Featured</span></div>
         <h3>Bank Marketing Success Prediction</h3>
         <p>End-to-end MLOps pipeline on GCP using Airflow, MLflow, DVC & Vertex AI with Terraform. 0.88 AUC; SMOTE bias mitigation reduced demographic bias by 20%. Flask API + GitHub Actions CI/CD cut deployment time by 50%.</p>
         <div class="proj-tech"><span class="proj-tag">GCP</span><span class="proj-tag">Airflow</span><span class="proj-tag">MLflow</span><span class="proj-tag">Vertex AI</span><span class="proj-tag">Terraform</span><span class="proj-tag">Flask</span></div>
         <div class="proj-links"><a href="https://github.com/Saitej0211/Bank_Marketing_Prediction_MLops" target="_blank" class="proj-link"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>GitHub</a></div>
       </div>
-
       <div class="proj-card" data-cat="de">
         <div class="proj-header"><span class="proj-type-badge badge-de">Data Engineering</span></div>
         <h3>Sales & Customer Analytics Data Warehouse</h3>
@@ -408,7 +381,6 @@ footer a{color:var(--teal);text-decoration:none;}
         <div class="proj-tech"><span class="proj-tag">AWS</span><span class="proj-tag">SQL</span><span class="proj-tag">Python</span><span class="proj-tag">Tableau</span><span class="proj-tag">Star Schema</span><span class="proj-tag">SCD Type-2</span></div>
         <div class="proj-links"><a href="https://github.com/Saitej0211" target="_blank" class="proj-link"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>GitHub</a></div>
       </div>
-
       <div class="proj-card" data-cat="de">
         <div class="proj-header"><span class="proj-type-badge badge-de">Streaming · ETL</span></div>
         <h3>Crime Analytics Streaming ETL Pipeline</h3>
@@ -416,7 +388,6 @@ footer a{color:var(--teal);text-decoration:none;}
         <div class="proj-tech"><span class="proj-tag">Kafka</span><span class="proj-tag">Spark</span><span class="proj-tag">MySQL</span><span class="proj-tag">MongoDB</span><span class="proj-tag">Python</span><span class="proj-tag">Tableau</span></div>
         <div class="proj-links"><a href="https://github.com/Saitej0211/Crime-Data" target="_blank" class="proj-link"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>GitHub</a></div>
       </div>
-
       <div class="proj-card" data-cat="da">
         <div class="proj-header"><span class="proj-type-badge badge-da">Analytics · BI</span></div>
         <h3>Amazon Prime Content Dashboard</h3>
@@ -424,28 +395,24 @@ footer a{color:var(--teal);text-decoration:none;}
         <div class="proj-tech"><span class="proj-tag">Power BI</span><span class="proj-tag">DAX</span><span class="proj-tag">Tableau</span><span class="proj-tag">Power Query</span><span class="proj-tag">Python</span></div>
         <div class="proj-links"><a href="https://app.powerbi.com/view?r=eyJrIjoiZDgyYzIzMzYtOWM0Ni00NzFmLWI2ODYtZGQ1M2M0ZTA2MWQ4IiwidCI6ImE4ZWVjMjgxLWFhYTMtNGRhZS1hYzliLTlhMzk4YjkyMTVlNyIsImMiOjN9" target="_blank" class="proj-link">Live Demo ↗</a></div>
       </div>
-
       <div class="proj-card" data-cat="ml">
         <div class="proj-header"><span class="proj-type-badge badge-ml">Machine Learning</span></div>
         <h3>Online Shoppers Intention Analysis</h3>
-        <p>Random Forest & Gradient Boosting models to predict purchasing intent. Inferential statistics (t-tests) to compare conversion rates across traffic sources. Identified 'PageValues' as top revenue predictor via diagnostic analysis.</p>
+        <p>Random Forest & Gradient Boosting models to predict purchasing intent. Inferential statistics to compare conversion rates across traffic sources. Identified 'PageValues' as top revenue predictor via diagnostic analysis.</p>
         <div class="proj-tech"><span class="proj-tag">Python</span><span class="proj-tag">Random Forest</span><span class="proj-tag">Gradient Boosting</span><span class="proj-tag">SQL</span><span class="proj-tag">Statistics</span></div>
         <div class="proj-links"><a href="https://github.com/Saitej0211/Online-Shoppers-Purchasing-Intention-Analysis" target="_blank" class="proj-link"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>GitHub</a></div>
       </div>
-
       <div class="proj-card" data-cat="ml">
         <div class="proj-header"><span class="proj-type-badge badge-ml">Segmentation · Analytics</span></div>
         <h3>Customer Segmentation via RFM + K-Means</h3>
-        <p>K-Means clustering and RFM analysis identifying key customer segments. VBA macros automated ingestion from 10+ CSV sources. ANOVA and t-tests validated segment spending differences; What-If scenarios maximized projected revenue.</p>
+        <p>K-Means clustering and RFM analysis identifying key customer segments. ANOVA and t-tests validated segment spending differences; What-If scenarios maximized projected revenue by 25%.</p>
         <div class="proj-tech"><span class="proj-tag">Python</span><span class="proj-tag">K-Means</span><span class="proj-tag">RFM</span><span class="proj-tag">Excel VBA</span><span class="proj-tag">Power Query</span></div>
         <div class="proj-links"><a href="https://github.com/Saitej0211/Customer-Segmentation-using-RFM-Analysis" target="_blank" class="proj-link"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>GitHub</a></div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- EDUCATION -->
 <section id="education">
   <div class="section-inner">
     <div class="section-label">Academic Background</div>
@@ -472,7 +439,6 @@ footer a{color:var(--teal);text-decoration:none;}
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
     <div class="section-label">Get In Touch</div>
@@ -500,7 +466,6 @@ footer a{color:var(--teal);text-decoration:none;}
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-logo">SRG<span>.</span></div>
   <p style="margin-bottom:.5rem;">Designed & built by <strong style="color:var(--white)">Saiteja Reddy Gajula</strong></p>
@@ -508,110 +473,69 @@ footer a{color:var(--teal);text-decoration:none;}
 </footer>
 
 <script>
-// CANVAS PARTICLE BG
-const canvas = document.getElementById('bg-canvas');
-const ctx = canvas.getContext('2d');
-let W, H, particles = [];
-function resize(){ W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
-resize(); window.addEventListener('resize', resize);
-
-class Particle {
-  constructor(){ this.reset(); }
-  reset(){
-    this.x = Math.random()*W; this.y = Math.random()*H;
-    this.r = Math.random()*1.5+.5;
-    this.vx = (Math.random()-.5)*.3; this.vy = (Math.random()-.5)*.3;
-    this.alpha = Math.random()*.5+.1;
-  }
-  update(){ this.x+=this.vx; this.y+=this.vy; if(this.x<0||this.x>W||this.y<0||this.y>H) this.reset(); }
-  draw(){
-    ctx.beginPath(); ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
-    ctx.fillStyle=`rgba(0,212,180,${this.alpha})`; ctx.fill();
-  }
+const canvas=document.getElementById('bg-canvas'),ctx=canvas.getContext('2d');
+let W,H,particles=[];
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+resize();window.addEventListener('resize',resize);
+class Particle{
+  constructor(){this.reset();}
+  reset(){this.x=Math.random()*W;this.y=Math.random()*H;this.r=Math.random()*1.5+.5;this.vx=(Math.random()-.5)*.3;this.vy=(Math.random()-.5)*.3;this.alpha=Math.random()*.5+.1;}
+  update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>W||this.y<0||this.y>H)this.reset();}
+  draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=`rgba(0,212,180,${this.alpha})`;ctx.fill();}
 }
-for(let i=0;i<120;i++) particles.push(new Particle());
-
+for(let i=0;i<120;i++)particles.push(new Particle());
 function drawLines(){
-  for(let i=0;i<particles.length;i++){
-    for(let j=i+1;j<particles.length;j++){
-      const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y;
-      const d=Math.sqrt(dx*dx+dy*dy);
-      if(d<120){ ctx.beginPath(); ctx.moveTo(particles[i].x,particles[i].y); ctx.lineTo(particles[j].x,particles[j].y); ctx.strokeStyle=`rgba(0,212,180,${.12*(1-d/120)})`; ctx.lineWidth=.5; ctx.stroke(); }
-    }
+  for(let i=0;i<particles.length;i++)for(let j=i+1;j<particles.length;j++){
+    const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,d=Math.sqrt(dx*dx+dy*dy);
+    if(d<120){ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.strokeStyle=`rgba(0,212,180,${.12*(1-d/120)})`;ctx.lineWidth=.5;ctx.stroke();}
   }
 }
-
-function animate(){ ctx.clearRect(0,0,W,H); particles.forEach(p=>{p.update();p.draw();}); drawLines(); requestAnimationFrame(animate); }
+function animate(){ctx.clearRect(0,0,W,H);particles.forEach(p=>{p.update();p.draw();});drawLines();requestAnimationFrame(animate);}
 animate();
 
-// CONTACT FORM - Formspree
 async function sendMessage(){
-  const FORMSPREE_ID = 'mqedvldz';
-  const btn = document.getElementById('send-btn');
-  const status = document.getElementById('form-status');
-  const name = document.querySelector('input[placeholder="Your name"]').value.trim();
-  const email = document.querySelector('input[placeholder="your@email.com"]').value.trim();
-  const subject = document.querySelector('input[placeholder="What\'s this about?"]').value.trim();
-  const message = document.querySelector('textarea').value.trim();
-
-  if(!name || !email || !message){
-    status.style.display='block'; status.style.color='#f87171';
-    status.textContent='⚠️ Please fill in your name, email, and message.'; return;
-  }
-
-  btn.textContent='Sending...'; btn.disabled=true; btn.style.opacity='.7';
-
-  try {
-    const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-      method:'POST',
-      headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body: JSON.stringify({name, email, subject, message})
-    });
-    const data = await res.json();
-    if(res.ok){
-      status.style.display='block'; status.style.color='var(--teal)';
-      status.textContent='✅ Message sent! I\'ll get back to you soon.';
-      document.querySelectorAll('.contact-form input, .contact-form textarea').forEach(el=>el.value='');
-    } else {
-      throw new Error(data?.errors?.[0]?.message || 'Something went wrong.');
-    }
-  } catch(err){
-    status.style.display='block'; status.style.color='#f87171';
-    status.textContent='❌ Failed to send: ' + err.message;
-  }
-  btn.textContent='Send Message →'; btn.disabled=false; btn.style.opacity='1';
+  const FORMSPREE_ID='mqedvldz';
+  const btn=document.getElementById('send-btn'),status=document.getElementById('form-status');
+  const name=document.querySelector('input[placeholder="Your name"]').value.trim();
+  const email=document.querySelector('input[placeholder="your@email.com"]').value.trim();
+  const subject=document.querySelector('input[placeholder="What\'s this about?"]').value.trim();
+  const message=document.querySelector('textarea').value.trim();
+  if(!name||!email||!message){status.style.display='block';status.style.color='#f87171';status.textContent='⚠️ Please fill in your name, email, and message.';return;}
+  btn.textContent='Sending...';btn.disabled=true;btn.style.opacity='.7';
+  try{
+    const res=await fetch(`https://formspree.io/f/${FORMSPREE_ID}`,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name,email,subject,message})});
+    const data=await res.json();
+    if(res.ok){status.style.display='block';status.style.color='var(--teal)';status.textContent='✅ Message sent! I\'ll get back to you soon.';document.querySelectorAll('.contact-form input,.contact-form textarea').forEach(el=>el.value='');}
+    else throw new Error(data?.errors?.[0]?.message||'Something went wrong.');
+  }catch(err){status.style.display='block';status.style.color='#f87171';status.textContent='❌ Failed to send: '+err.message;}
+  btn.textContent='Send Message →';btn.disabled=false;btn.style.opacity='1';
 }
+
 const roles=["Data Engineer","Data Scientist","ML Engineer","Data Analyst","Business Analyst"];
 let ri=0,ci=0,del=false;
 const el=document.getElementById('typed-role');
 function type(){
   const cur=roles[ri];
-  if(!del){ el.textContent=cur.slice(0,++ci); if(ci===cur.length){del=true;setTimeout(type,1800);return;} }
-  else{ el.textContent=cur.slice(0,--ci); if(ci===0){del=false;ri=(ri+1)%roles.length;} }
+  if(!del){el.textContent=cur.slice(0,++ci);if(ci===cur.length){del=true;setTimeout(type,1800);return;}}
+  else{el.textContent=cur.slice(0,--ci);if(ci===0){del=false;ri=(ri+1)%roles.length;}}
   setTimeout(type,del?55:85);
 }
 type();
 
-// SCROLL REVEAL
-const obs=new IntersectionObserver(entries=>entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }),{threshold:.12});
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-// NAV ACTIVE
-const secs=document.querySelectorAll('section[id]');
-const links=document.querySelectorAll('.nav-links a:not(.nav-cta)');
+const secs=document.querySelectorAll('section[id]'),links=document.querySelectorAll('.nav-links a:not(.nav-cta)');
 window.addEventListener('scroll',()=>{
   let cur='';
-  secs.forEach(s=>{ if(window.scrollY>=s.offsetTop-80) cur=s.id; });
-  links.forEach(a=>{ const active=a.getAttribute('href')==='#'+cur; a.style.color=active?'var(--teal)':''; if(active) a.style.setProperty('--w','100%'); });
+  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-80)cur=s.id;});
+  links.forEach(a=>{const active=a.getAttribute('href')==='#'+cur;a.style.color=active?'var(--teal)':'';});
 });
 
-// PROJECT FILTER
-function filterProj(cat, btn){
+function filterProj(cat,btn){
   document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
-  document.querySelectorAll('.proj-card').forEach(c=>{
-    c.style.display=(cat==='all'||c.dataset.cat===cat)?'flex':'none';
-  });
+  document.querySelectorAll('.proj-card').forEach(c=>{c.style.display=(cat==='all'||c.dataset.cat===cat)?'flex':'none';});
 }
 </script>
 </body>
